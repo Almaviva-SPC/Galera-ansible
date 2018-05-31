@@ -39,6 +39,8 @@ run only the tasks tagged with ``setup``
 
     ansible-playbook -i galera.hosts galera.yml --tags setup
 
+Note: Remeber to change sst_user and sst_pass inside group vars
+
 Configure MariaDB Galera cluster
 --------------------------------
 
