@@ -1,2 +1,3 @@
 datadev_name: sdb
 mysql_dir: /mysql_data
+mariarelease: 10.3
