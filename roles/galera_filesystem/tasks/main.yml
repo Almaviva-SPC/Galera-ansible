@@ -33,6 +33,12 @@
   when: lv_create|succeeded
   register: xfs_format
 
+- name: Crea directory per mount mysql data
+  file:
+    path: /mysql
+    owner: mysql
+    group: mysql
+  
 - name: Edit fstab and mount the XFS volume
   mount:
     name: "{{mysql_dir}}"
