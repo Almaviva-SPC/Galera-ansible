@@ -1,3 +1,6 @@
 datadev_name: sdb
 mysql_dir: /mysql_data
 mariarelease: 10.3
+galeraclusterid: 5
+galeraclustername: aifaportal
+galerainterconnectinterface: ens160
