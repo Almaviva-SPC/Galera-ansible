@@ -3,6 +3,6 @@ mysql_dir: /mysql_data
 mariarelease: 10.3
 galeraclusterid: 5
 galeraclustername: aifaportal
-galerainterconnectinterface: ens160
+galerainterconnectinterface: ens192
 sst_user: galera1
 sst_pass: galera1
