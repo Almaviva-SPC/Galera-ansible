@@ -36,9 +36,9 @@
 - name: Crea directory per mount mysql data
   file:
     path: /mysql
+    state: directory
     owner: mysql
     group: mysql
-    state = directory
   
 - name: Edit fstab and mount the XFS volume
   mount:
