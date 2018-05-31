@@ -35,7 +35,7 @@
 
 - name: Edit fstab and mount the XFS volume
   mount:
-    name: "{{mysql_brick_dir}}"
+    name: "{{mysql_dir}}"
     src: /dev/vg_mysql/lv_mysql
     fstype: xfs
     opts: "noatime"
