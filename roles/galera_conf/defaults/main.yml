@@ -1,8 +1,8 @@
 ---
-galera_server_id: {{ galeraclusterid }}
-galera_wsrep_cluster_name: {{ galeraclustername }}
+galera_server_id: "{{ galeraclusterid }}"
+galera_wsrep_cluster_name: "{{ galeraclustername }}"
 bootstrapped: no
-galera_sst_user: {{ sst_user }}
-galera_sst_pass: {{ sst_pass }}
-galera_cluster_interface: {{ galerainterconnectinterface }}
-galera_cluster_interface_fact_var: ansible_{{ galera_cluster_interface }}
+galera_sst_user: "{{ sst_user }}"
+galera_sst_pass: "{{ sst_pass }}"
+galera_cluster_interface: "{{ galerainterconnectinterface }}"
+galera_cluster_interface_fact_var: ansible_"{{ galera_cluster_interface }}"
