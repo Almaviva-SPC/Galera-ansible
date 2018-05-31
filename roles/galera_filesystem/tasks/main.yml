@@ -45,4 +45,4 @@
     src: /dev/vg_mysql/lv_mysql
     fstype: xfs
     opts: "noatime"
-state: mounted
+    state: mounted
