@@ -33,14 +33,6 @@
   when: lv_create|succeeded
   register: xfs_format
 
-- name: Verify Gluster brick directory
-  file:
-    path: "{{item}}"
-    state: directory
-    mode: 0775
-  with_items:
-    - "{{data_brick_dir}}"
-
 - name: Edit fstab and mount the XFS volume
   mount:
     name: "{{mysql_brick_dir}}"
