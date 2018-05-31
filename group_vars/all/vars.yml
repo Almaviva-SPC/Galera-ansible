@@ -6,3 +6,4 @@ galeraclustername: aifaportal
 galerainterconnectinterface: ens192
 sst_user: galera1
 sst_pass: galera1
+node_ips: 10.198.16.52,10.198.16.53
