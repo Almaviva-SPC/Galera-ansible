@@ -39,6 +39,7 @@
     state: directory
     owner: mysql
     group: mysql
+    recurse: yes 
   
 - name: Edit fstab and mount the XFS volume
   mount:
