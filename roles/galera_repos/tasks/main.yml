@@ -18,6 +18,17 @@
 #  shell: /bin/sleep 5 && shutdown -r now "ansible restart"
 #  ignore_errors: true
 #  when: selinux.changed
+
+- name: Crea directory per mount mysql data
+  file:
+    path: "{{ item }}"
+    owner: mysql
+    group: mysql
+    mode: 0755
+    state: directory
+  with_items:
+    - /pluto
+    - /pluto/paperino
   
 # Reboot
 - name: (reboot) Reboot triggered
