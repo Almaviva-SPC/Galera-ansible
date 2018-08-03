@@ -1,5 +1,5 @@
 datadev_name: sdb
-mysql_dir: /var/lib/mysql
+mysql_dir: /mysql/data
 mariarelease: 10.3
 galeraclusterid: 5
 galeraclustername: aifaportal
