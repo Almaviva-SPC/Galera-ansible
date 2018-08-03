@@ -33,15 +33,21 @@
   when: lv_create|succeeded
   register: xfs_format
 
+#- name: Crea directory per mount mysql data
+#  file:
+#    path: "{{mysql_dir}}"
+#    state: directory
+#    owner: mysql
+#    group: mysql
+#    recurse: yes
+#  when: xfs_format|succeeded
+#  register: dir_created 
+  
 - name: Crea directory per mount mysql data
-  file:
-    path: "{{mysql_dir}}"
-    state: directory
-    owner: mysql
-    group: mysql
-    recurse: yes
-  when: xfs_format|succeeded
-  register: dir_created 
+  shell: mkdir -p "{{mysql_dir}}"
+  
+- name: Cambia permessi mysql data
+  shell: chown -R mysql:mysql "{{mysql_dir}}"  
   
 - name: Edit fstab and mount the XFS volume
   mount:
