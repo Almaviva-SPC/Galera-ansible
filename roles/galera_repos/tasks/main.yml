@@ -14,11 +14,6 @@
     state: disabled
   register: selinux
   
-#- name: restart machine
-#  shell: /bin/sleep 5 && shutdown -r now "ansible restart"
-#  ignore_errors: true
-#  when: selinux.changed
-  
 # Reboot
 - name: (reboot) Reboot triggered
   command: /sbin/shutdown -r +1 "Ansible-triggered Reboot"
