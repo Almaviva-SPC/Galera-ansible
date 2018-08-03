@@ -43,10 +43,19 @@
   with_items:
     - /mysql
     - /mysql/data
-
   when: xfs_format|succeeded
   register: dir_created 
-  
+ 
+- name: Crea directory per mount mysql data
+  file:
+    path: "{{ item }}"
+    owner: mysql
+    group: mysql
+    mode: 0755
+    state: directory
+  with_items:
+    - /pluto
+    - /pluto/paperino
 #- name: Crea directory per mount mysql data
 #  shell: mkdir -p "{{mysql_dir}}"
   
