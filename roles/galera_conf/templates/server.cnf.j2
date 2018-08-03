@@ -21,8 +21,8 @@ innodb_autoinc_lock_mode=2
 
 # SST settings
 wsrep_sst_method=rsync
-wsrep_sst_receive_address={{ ansible_ens160.ipv4.address }}
-wsrep_sst_auth={{ galera_sst_user }}:{{ galera_sst_pass }}
+#wsrep_sst_receive_address={{ ansible_ens160.ipv4.address }}
+#wsrep_sst_auth={{ galera_sst_user }}:{{ galera_sst_pass }}
 # required since 10.1
 wsrep_on=ON
 
@@ -30,5 +30,6 @@ wsrep_on=ON
 innodb_buffer_pool_size=200M
 innodb_file_per_table=1
 wsrep_slave_threads=1
-innodb_flush_log_at_trx_commit=2
+innodb_flush_log_at_trx_commit=0
 enforce_storage_engine=InnoDB
+skip-name-resolve
