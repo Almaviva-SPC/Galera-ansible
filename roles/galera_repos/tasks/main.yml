@@ -19,13 +19,13 @@
 #  ignore_errors: true
 #  when: selinux.changed
   
-## Reboot
-#- name: (reboot) Reboot triggered
-#  command: /sbin/shutdown -r +1 "Ansible-triggered Reboot"
-#  async: 0
-#  poll: 0
+# Reboot
+- name: (reboot) Reboot triggered
+  command: /sbin/shutdown -r +1 "Ansible-triggered Reboot"
+  async: 0
+  poll: 0
 
-#- name: (reboot) Wait for server to restart
-#  wait_for_connection:
-#    delay: 75
+- name: (reboot) Wait for server to restart
+  wait_for_connection:
+    delay: 75
   
