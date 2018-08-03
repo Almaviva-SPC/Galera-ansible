@@ -16,8 +16,6 @@
   
 - name: restart machine
   shell: /bin/sleep 5 && shutdown -r now "ansible restart"
-  async: 1
-  pol: 0
   ignore_errors: true
   when: selinux.changed 
   
