@@ -35,12 +35,15 @@
 
 - name: Crea directory per mount mysql data
   file:
-    path: "{{mysql_dir}}"
+    path: "{{ item }}"
     owner: mysql
     group: mysql
     mode: 0755
     state: directory
-    recurse: yes
+  with_items:
+    - /mysql
+    - /mysql/data
+
   when: xfs_format|succeeded
   register: dir_created 
   
