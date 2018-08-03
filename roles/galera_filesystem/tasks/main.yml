@@ -39,7 +39,9 @@
     state: directory
     owner: mysql
     group: mysql
-    recurse: yes 
+    recurse: yes
+  when: xfs_format|succeeded
+  register: dir_created 
   
 - name: Edit fstab and mount the XFS volume
   mount:
@@ -48,3 +50,5 @@
     fstype: xfs
     opts: "noatime"
     state: mounted
+  when: dir_created |succeeded
+  register: mounted 
