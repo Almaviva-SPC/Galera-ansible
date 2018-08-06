@@ -5,6 +5,7 @@
   
 - name: Copia dei file nella nuova data directory
   shell: cp -r /var/lib/mysql/* "{{mysql_dir}}"
+  shell: chown -R mysql:mysql "{{mysql_dir}}"
   #when: inventory_hostname != groups['galera_cluster'][0]
 
 - name: Bootstrap first MariaDB Galera cluster node
