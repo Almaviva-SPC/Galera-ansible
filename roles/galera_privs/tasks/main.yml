@@ -5,7 +5,10 @@
 - name: Modifca permessi data directory
   shell: chgrp mysql "{{mysql_dir}}"/mysql
 
-- name: Ensure MariaDB is running
+- name: Ensure MariaDB is restarted
+  service: name=mariadb state=stopped
+  
+- name: Ensure MariaDB is restarted
   service: name=mariadb state=started
 
 #- name: Add Galera SST user
