@@ -4,7 +4,7 @@
   when: inventory_hostname == groups['galera_cluster'][0]
   
 - name: Copia dei file nella nuova data directory
-  shell: cp -rp /var/lib/mysql/* "{{mysql_dir}}"
+  shell: cp -r /var/lib/mysql/* "{{mysql_dir}}"
 
 - name: Bootstrap first MariaDB Galera cluster node
   command: galera_new_cluster
