@@ -1,6 +1,9 @@
 ---
 - name: Modifca data directory
   shell: /usr/bin/mysql_install_db --user=mysql --datadir="{{mysql_dir}}" --skip-name-resolve
+  
+- name: Modifca permessi data directory
+  shell: chgrp mysql "{{mysql_dir}}"/mysql
 
 - name: Ensure MariaDB is running
   service: name=mariadb state=started
