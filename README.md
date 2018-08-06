@@ -1,4 +1,4 @@
-configuration management for MariaDB Galera cluster
+Configuration management for MariaDB Galera cluster
 ===================================================
 
 These roles allow you to automatically setup a MariaDB Galera cluster with sane
