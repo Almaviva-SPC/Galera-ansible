@@ -1,4 +1,7 @@
 ---
+- name: Modifca data directory
+  shell: /usr/lib/mysql_install_db --datadir="{{mysql_dir}}"
+
 - name: Ensure MariaDB is running
   service: name=mariadb state=started
 
