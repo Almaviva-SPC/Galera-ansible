@@ -1,10 +1,12 @@
 ---  
-- name: Stop MariaDB on first MariaDB Galera cluster node
+- name: Stop MariaDB 
   service: name=mariadb state=stopped
-  when: inventory_hostname == groups['galera_cluster'][0]
+  #when: inventory_hostname == groups['galera_cluster'][0]
   
 - name: Copia dei file nella nuova data directory
-  shell: cp -r /var/lib/mysql/* "{{mysql_dir}}"
+  shell: cp -R /var/lib/mysql/* "{{mysql_dir}}"
+  
+- name: Cambio ownership dei file della data directory
   shell: chown -R mysql:mysql "{{mysql_dir}}"
   #when: inventory_hostname != groups['galera_cluster'][0]
 
