@@ -12,8 +12,11 @@
 
 - name: Bootstrap first MariaDB Galera cluster node
   command: galera_new_cluster
+#  when: inventory_hostname == groups['galera_cluster'][0]
   when: inventory_hostname == groups['galera_cluster'][0]
+ 
 
 - name: Restart the other MariaDB Galera cluster nodes
   service: name=mariadb state=restarted
-  when: inventory_hostname != groups['galera_cluster'][0]
+ # when: inventory_hostname != groups['galera_cluster'][0]
+  when: inventory_hostname == groups['galera_cluster'][1]
