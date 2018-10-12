@@ -51,6 +51,9 @@ tasks tagged ``setup`` or run the tags ``config`` or ``auth`` directly.
 
     ansible-playbook -i galera.hosts galera.yml --skip-tags setup
 
+!! N.B.!!
+Prima di effettuare il bootstrap lanciare la SECURE INSTALLATION
+
 Bootstrapping MariaDB Galera cluster
 ------------------------------------
 
