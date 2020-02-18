@@ -14,6 +14,18 @@ Installazione e configurazione iniziale dei nodi
 - fare il download con git clone
 - modificare il file **galera.hosts** con gli ip degli host da raggiungere
 - modificare le variabili sotto **group_vars/all/vars.yml**
+
+    datadev_name: sdb
+    mysql_dir: "/mysql/data"
+    mariarelease: 10.4
+    galeraclusterid: 1
+    galeraclustername: <nome del cluster>
+    galerainterconnectinterface: <nome device di interconnesione di solito ens192>
+    sst_user: galera1
+    sst_pass: galera1
+    node_ips: <tutti gli ip di interconnessione separati dalla virgola>
+
+
 - fare un accesso in ssh sugli host da raggiungere per rispondere "yes" alla domanda degli "host conosciuti"
 - lanciare lo script ansible e alla richiesta delle credenziali mettere quelle di root dei nodi:
     
