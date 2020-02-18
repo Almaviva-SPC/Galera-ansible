@@ -2,7 +2,6 @@ Installazione Cluster Mariadb Galera
 ===================================================
 
 ### Prerequisiti ###
---------------------------------
 Assicurarsi che sulle macchine sia presente:
 - la scheda di interconnessione
 - un disco dedicato hai dati del Db
