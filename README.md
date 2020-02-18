@@ -6,8 +6,8 @@ Installazione e configurazione iniziale dei nodi
 --------------------------------
 
 - fare il download con git clone
-- modificare il file galera.hosts con gli ip degli host da raggiungere
-- modificare le variabili sotto group_vars/all/vars.yml
+- modificare il file **galera.hosts** con gli ip degli host da raggiungere
+- modificare le variabili sotto **group_vars/all/vars.yml**
 - fare un accesso in ssh sugli host da raggiungere per rispondere "yes" alla domanda degli "host conosciuti"
 - lanciare lo script ansible e alla richiesta delle credenziali mettere quelle di root dei nodi:
     
