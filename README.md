@@ -18,6 +18,6 @@ Prima di effettuare il bootstrap lanciare la SECURE INSTALLATION su entrambi i n
 
 Bootstrapping MariaDB Galera cluster
 ------------------------------------
--lanciare lo script ansible:
+- lanciare lo script ansible:
 
     ansible-playbook -i galera.hosts galera_bootstrap.yml
