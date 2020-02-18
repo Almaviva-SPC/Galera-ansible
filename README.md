@@ -19,11 +19,11 @@ Installazione e configurazione iniziale dei nodi
     mysql_dir: "/mysql/data" <br>
     mariarelease: 10.4 <br>
     galeraclusterid: 1 <br>
-    galeraclustername: <nome del cluster> <br> 
-    galerainterconnectinterface: <nome device di interconnesione di solito ens192> <br>
+    galeraclustername: "nome del cluster" <br> 
+    galerainterconnectinterface: "nome device di interconnesione di solito ens192" <br>
     sst_user: galera1 <br>
     sst_pass: galera1 <br>
-    node_ips: <tutti gli ip di interconnessione separati dalla virgola> <br>
+    node_ips: "tutti gli ip di interconnessione separati dalla virgola" <br>
 
 
 - fare un accesso in ssh sugli host da raggiungere per rispondere "yes" alla domanda degli "host conosciuti"
