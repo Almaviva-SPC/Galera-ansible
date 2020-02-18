@@ -15,15 +15,15 @@ Installazione e configurazione iniziale dei nodi
 - modificare il file **galera.hosts** con gli ip degli host da raggiungere
 - modificare le variabili sotto **group_vars/all/vars.yml**
 
-    datadev_name: sdb
-    mysql_dir: "/mysql/data"
-    mariarelease: 10.4
-    galeraclusterid: 1
-    galeraclustername: <nome del cluster>
-    galerainterconnectinterface: <nome device di interconnesione di solito ens192>
-    sst_user: galera1
-    sst_pass: galera1
-    node_ips: <tutti gli ip di interconnessione separati dalla virgola>
+    datadev_name: sdb <br>
+    mysql_dir: "/mysql/data" <br>
+    mariarelease: 10.4 <br>
+    galeraclusterid: 1 <br>
+    galeraclustername: <nome del cluster> <br> 
+    galerainterconnectinterface: <nome device di interconnesione di solito ens192> <br>
+    sst_user: galera1 <br>
+    sst_pass: galera1 <br>
+    node_ips: <tutti gli ip di interconnessione separati dalla virgola> <br>
 
 
 - fare un accesso in ssh sugli host da raggiungere per rispondere "yes" alla domanda degli "host conosciuti"
