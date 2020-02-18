@@ -1,9 +1,9 @@
 datadev_name: sdb
 mysql_dir: "/mysql/data"
-mariarelease: 10.3
-galeraclusterid: 5
-galeraclustername: aifaportal
+mariarelease: 10.4
+galeraclusterid: 1
+galeraclustername: nome
 galerainterconnectinterface: ens192
 sst_user: galera1
 sst_pass: galera1
-node_ips: 10.198.16.52,10.198.16.53
+node_ips: 1.1.1.1,1.1.1.2
