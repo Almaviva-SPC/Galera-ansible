@@ -9,15 +9,15 @@ Installazione e configurazione iniziale dei nodi
 - modificare il file galera.hosts con gli ip degli host da raggiungere
 - modificare le variabili sotto group_vars/all/vars.yml
 - fare un accesso in ssh sugli host da raggiungere per rispondere "yes" alla domanda degli "host conosciuti"
-- lanciare lo script ansible:
+- lanciare lo script ansible e alla richiesta delle credenziali mettere quelle di root dei nodi:
     
-    ansible-playbook -i galera.hosts galera.yml -k
+    `ansible-playbook -i galera.hosts galera.yml -k`
 
 !! N.B.!!
 Prima di effettuare il bootstrap lanciare la SECURE INSTALLATION su entrambi i nodi del cluster
 
 Bootstrapping MariaDB Galera cluster
 ------------------------------------
-- lanciare lo script ansible:
+- lanciare lo script ansible e alla richiesta delle credenziali mettere quelle di root dei nodi:
 
-    ansible-playbook -i galera.hosts galera_bootstrap.yml
+    `ansible-playbook -i galera.hosts galera_bootstrap.yml -k`
